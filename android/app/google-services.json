@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "275451677757",
+    "project_id": "petrolflutterapp",
+    "storage_bucket": "petrolflutterapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275451677757:android:15790dd28126f94ded6e54",
+        "android_client_info": {
+          "package_name": "com.example.petrol_app_mtaani_tech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275451677757-h75oqn69bqj3scolfl6ilskketeqs9v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJVYCePF7mGRjEgU0gJ0azD6ZhOBO9t6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275451677757-h75oqn69bqj3scolfl6ilskketeqs9v9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "275451677757-k2o4sqe52qra3bcvuiqv4nvuj1fjvnd1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mtaanitech.petroleum"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275451677757:android:b0500b834ad80ad1ed6e54",
+        "android_client_info": {
+          "package_name": "com.mtaanitech.petroleum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275451677757-emjg9u4d7f172cbskkif0tto8qr6b23r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mtaanitech.petroleum",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "275451677757-h75oqn69bqj3scolfl6ilskketeqs9v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJVYCePF7mGRjEgU0gJ0azD6ZhOBO9t6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275451677757-h75oqn69bqj3scolfl6ilskketeqs9v9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "275451677757-k2o4sqe52qra3bcvuiqv4nvuj1fjvnd1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mtaanitech.petroleum"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
