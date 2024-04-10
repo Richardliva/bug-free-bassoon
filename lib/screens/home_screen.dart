@@ -17,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  BottomNavigationBarType _bottomNavType = BottomNavigationBarType.fixed;
+  final BottomNavigationBarType _bottomNavType = BottomNavigationBarType.fixed;
   @override
   Widget build(BuildContext context) {
     final ap = Provider.of<AuthProvider>(context, listen: false);
@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     dataProvider.getLiveStatsFromFirestore();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 90, 5),
+        backgroundColor: const Color.fromARGB(255, 0, 90, 5),
         title: Text("Welcome ${ap.userModel.name}"),
         actions: [
           IconButton(
@@ -47,15 +47,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ? NormalHome(
               ap: ap, selectedIndex: _selectedIndex, navBarItems: _navBarItems)
           : _navBarItems[_selectedIndex].label == 'Scan'
-              ? QRSCan()
+              ? const QRSCan()
               : _navBarItems[_selectedIndex].label == 'Search'
-                  ? SearchCloud()
+                  ? const SearchCloud()
                   : _navBarItems[_selectedIndex].label == 'Live Stats'
-                      ? LiveStats()
-                      : Text('wtf'),
+                      ? const LiveStats()
+                      : const Text('wtf'),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
-          selectedItemColor: Color.fromARGB(255, 8, 85, 1),
+          selectedItemColor: const Color.fromARGB(255, 8, 85, 1),
           unselectedItemColor: const Color(0xff757575),
           type: _bottomNavType,
           onTap: (index) {

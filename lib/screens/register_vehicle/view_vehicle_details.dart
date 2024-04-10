@@ -122,7 +122,7 @@ class ViewVehicleDetails extends StatelessWidget {
                                   },
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Color.fromARGB(255, 2, 148, 2)),
+                                          const Color.fromARGB(255, 2, 148, 2)),
                                 ),
                               ),
                               const SizedBox(height: 10),
@@ -141,7 +141,7 @@ class ViewVehicleDetails extends StatelessWidget {
                                   },
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Color.fromARGB(255, 2, 29, 148)),
+                                          const Color.fromARGB(255, 2, 29, 148)),
                                 ),
                               ),
                               const SizedBox(

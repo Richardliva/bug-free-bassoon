@@ -4,7 +4,7 @@ import 'package:petrol_app_mtaani_tech/provider/data_provider.dart';
 import 'package:provider/provider.dart';
 
 class LiveStats extends StatefulWidget {
-  const LiveStats({Key? key}) : super(key: key);
+  const LiveStats({super.key});
 
   @override
   _LiveStatsState createState() => _LiveStatsState();

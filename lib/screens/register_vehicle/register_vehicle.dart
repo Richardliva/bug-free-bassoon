@@ -66,7 +66,7 @@ class _RegisterVehicleState extends State<RegisterVehicle> {
     );
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 90, 5),
+        backgroundColor: const Color.fromARGB(255, 0, 90, 5),
         title: const Text("Register Vehicle"),
       ),
       body: SafeArea(
@@ -311,7 +311,7 @@ class _RegisterVehicleState extends State<RegisterVehicle> {
                   ],
                 ),
               )
-            : Center(
+            : const Center(
                 child: CircularProgressIndicator(),
               ),
       )),

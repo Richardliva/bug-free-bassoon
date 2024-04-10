@@ -3,7 +3,6 @@ import 'package:petrol_app_mtaani_tech/models/owner_model.dart';
 import 'package:petrol_app_mtaani_tech/models/qr_code_model.dart';
 import 'package:petrol_app_mtaani_tech/models/vehicle_model.dart';
 import 'package:petrol_app_mtaani_tech/provider/data_provider.dart';
-import 'package:petrol_app_mtaani_tech/widgets/custom_button.dart';
 import 'package:provider/provider.dart';
 
 class ViewQRCode extends StatelessWidget {
@@ -30,7 +29,7 @@ class ViewQRCode extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.9,
                   margin: const EdgeInsets.all(1.0),
                   child: Column(children: [
-                     Text('Vehicle QR Code ${vehicleModel.registrationPlate}', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                     Text('Vehicle QR Code ${vehicleModel.registrationPlate}', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                     const SizedBox(height: 20),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.9,

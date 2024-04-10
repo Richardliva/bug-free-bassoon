@@ -78,13 +78,11 @@ class AuthProvider extends ChangeNotifier {
       PhoneAuthCredential creds = PhoneAuthProvider.credential(
           verificationId: verificationId, smsCode: userOtp);
       User? user = (await _firebaseAuth.signInWithCredential(creds)).user!;
-      if (user != null) {
-        // carry logic
-        _uid = user.uid;
-        _isLoading = false;
-        onSuccess();
-      }
+      // carry logic
+      _uid = user.uid;
       _isLoading = false;
+      onSuccess();
+          _isLoading = false;
       onSuccess();
     } on FirebaseAuthException catch (e) {
       showSnackbar(context, e.message.toString());

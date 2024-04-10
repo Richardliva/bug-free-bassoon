@@ -8,7 +8,6 @@ import 'package:petrol_app_mtaani_tech/models/owner_model.dart';
 import 'package:petrol_app_mtaani_tech/models/user_model.dart';
 import 'package:petrol_app_mtaani_tech/models/vehicle_model.dart';
 import 'package:petrol_app_mtaani_tech/provider/data_provider.dart';
-import 'package:petrol_app_mtaani_tech/utils/utils.dart';
 import 'package:petrol_app_mtaani_tech/widgets/custom_button.dart';
 import 'package:petrol_app_mtaani_tech/widgets/custom_input.dart';
 import 'package:provider/provider.dart';

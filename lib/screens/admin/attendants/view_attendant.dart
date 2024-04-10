@@ -6,7 +6,6 @@ import 'package:petrol_app_mtaani_tech/models/user_model.dart';
 import 'package:petrol_app_mtaani_tech/provider/auth_provider.dart';
 import 'package:petrol_app_mtaani_tech/provider/data_provider.dart';
 import 'package:petrol_app_mtaani_tech/screens/admin/attendants/edit_attendant.dart';
-import 'package:petrol_app_mtaani_tech/widgets/custom_button.dart';
 import 'package:petrol_app_mtaani_tech/widgets/home_button.dart';
 import 'package:provider/provider.dart';
 

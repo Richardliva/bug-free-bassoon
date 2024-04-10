@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:petrol_app_mtaani_tech/provider/auth_provider.dart';
-import 'package:petrol_app_mtaani_tech/screens/home_screen.dart';
-import 'package:petrol_app_mtaani_tech/screens/main_screen.dart';
 import 'package:petrol_app_mtaani_tech/screens/register_screen.dart';
 import 'package:petrol_app_mtaani_tech/widgets/custom_button.dart';
 import 'package:provider/provider.dart';

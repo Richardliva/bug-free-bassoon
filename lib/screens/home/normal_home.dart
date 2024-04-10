@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:petrol_app_mtaani_tech/provider/auth_provider.dart';
 import 'package:petrol_app_mtaani_tech/provider/data_provider.dart';
@@ -7,8 +5,6 @@ import 'package:petrol_app_mtaani_tech/screens/admin/attendants/attendants_list.
 import 'package:petrol_app_mtaani_tech/screens/admin/vehicles/vehicle_list.dart';
 import 'package:petrol_app_mtaani_tech/screens/liveStats/edit_livestats.dart';
 import 'package:petrol_app_mtaani_tech/screens/register_vehicle/register_vehicle.dart';
-import 'package:petrol_app_mtaani_tech/utils/utils.dart';
-import 'package:petrol_app_mtaani_tech/widgets/custom_button.dart';
 import 'package:petrol_app_mtaani_tech/widgets/home_button.dart';
 import 'package:provider/provider.dart';
 
@@ -91,7 +87,7 @@ class NormalHome extends StatelessWidget {
                                   },
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Color.fromARGB(255, 2, 148, 2)),
+                                          const Color.fromARGB(255, 2, 148, 2)),
                                 ),
                               ),
                               const SizedBox(height: 10),
@@ -111,7 +107,7 @@ class NormalHome extends StatelessWidget {
                                   },
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Color.fromARGB(255, 131, 2, 148)),
+                                          const Color.fromARGB(255, 131, 2, 148)),
                                 ),
                               ),
                               const SizedBox(height: 10),

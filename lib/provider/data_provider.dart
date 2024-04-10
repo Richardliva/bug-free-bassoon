@@ -263,6 +263,7 @@ class DataProvider extends ChangeNotifier {
       _vehicleId = snapshot.id;
       return _vehicleModel!;
     });
+    return null;
   }
 
   Future getFuelingDataFromFirestore(String fuelingId) async {
@@ -298,6 +299,7 @@ class DataProvider extends ChangeNotifier {
       _ownerId = snapshot.id;
       return _ownerModel!;
     });
+    return null;
   }
 
   Future<QRCodeModel?> getQRCodeDataFromFirestore(String vehicleId) async {
@@ -314,6 +316,7 @@ class DataProvider extends ChangeNotifier {
       _qrCodeId = snapshot.docs[0].id;
       return _qrCodeModel!;
     });
+    return null;
   }
 
   Future getEnrollerDataFromFirestore(String enrollerId) async {
@@ -359,7 +362,7 @@ class DataProvider extends ChangeNotifier {
           .collection("Vehicles")
           .get()
           .then((querySnapshot) {
-        querySnapshot.docs.forEach((result) {
+        for (var result in querySnapshot.docs) {
           vehicles.add(VehicleModel(
             vehicleId: result.id,
             enrollerId: result['enrollerId'],
@@ -370,7 +373,7 @@ class DataProvider extends ChangeNotifier {
             vehicleOwnerId: result["vehicleOwnerId"],
             caseSearch: result["caseSearch"],
           ));
-        });
+        }
       });
       return vehicles;
     } on Exception catch (e) {
@@ -384,7 +387,7 @@ class DataProvider extends ChangeNotifier {
     List<UserModel> users = [];
     try {
       await _firebaseFirestore.collection("users").get().then((querySnapshot) {
-        querySnapshot.docs.forEach((result) {
+        for (var result in querySnapshot.docs) {
           users.add(UserModel(
             name: result['name'],
             email: result['email'],
@@ -394,7 +397,7 @@ class DataProvider extends ChangeNotifier {
             profilePic: result['profilePic'],
             phoneNumber: result['phoneNumber'],
           ));
-        });
+        }
       });
       return users;
     } on Exception catch (e) {
@@ -525,7 +528,7 @@ class DataProvider extends ChangeNotifier {
           .where('vehicleId', isEqualTo: vehicleId)
           .get()
           .then((querySnapshot) {
-        querySnapshot.docs.forEach((result) {
+        for (var result in querySnapshot.docs) {
           fuelingList.add(FuelingModel(
             fuelingId: result.id,
             fuelLitres: result['fuelLitres'],
@@ -536,10 +539,10 @@ class DataProvider extends ChangeNotifier {
             vehicleId: result['vehicleId'],
             attendantId: result['attendantId'],
           ));
-        });
+        }
       });
       return fuelingList;
-    } on Exception catch (e) {
+    } on Exception {
       debugPrint("THIS YOU?!");
       return fuelingList;
     }
@@ -567,7 +570,7 @@ class DataProvider extends ChangeNotifier {
           .collection(ServerAdminCollection)
           .doc(LiveStatsDocumentId)
           .update({
-        "admins": FieldValue.arrayUnion(['${user.uid}'])
+        "admins": FieldValue.arrayUnion([(user.uid)])
       });
       return true;
     } on Exception catch (e) {
@@ -603,7 +606,7 @@ class DataProvider extends ChangeNotifier {
           .where('vehicleId', isEqualTo: vehicleId)
           .get()
           .then((querySnapshot) {
-        querySnapshot.docs.forEach((result) {
+        for (var result in querySnapshot.docs) {
           loyaltyPointsList.add(LoyaltyPointsModel(
             loyaltyPointsId: result.id,
             vehicleId: result['vehicleId'],
@@ -612,7 +615,7 @@ class DataProvider extends ChangeNotifier {
             transactionDate: result['transactionDate'],
             fuelingId: result['fuelingId'],
           ));
-        });
+        }
       });
       return loyaltyPointsList;
     } on Exception catch (e) {
@@ -631,14 +634,14 @@ class DataProvider extends ChangeNotifier {
           .where('vehicleId', isEqualTo: vehicleId)
           .get()
           .then((querySnapshot) {
-        querySnapshot.docs.forEach((result) {
+        for (var result in querySnapshot.docs) {
           // Check Transaction Type and Add or Subtract
           if (result['transactionType'] == "DEPOSIT") {
             currentLoyaltyPoints += double.parse(result['loyaltyPoints']);
           } else {
             currentLoyaltyPoints -= double.parse(result['loyaltyPoints']);
           }
-        });
+        }
       });
       return currentLoyaltyPoints;
     } on Exception catch (e) {

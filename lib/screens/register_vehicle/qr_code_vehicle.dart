@@ -8,7 +8,6 @@ import 'package:petrol_app_mtaani_tech/provider/data_provider.dart';
 import 'package:petrol_app_mtaani_tech/widgets/custom_button.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:qr/qr.dart';
 import 'package:screenshot/screenshot.dart';
 
 class QRCodeGenerator extends StatelessWidget {
@@ -55,8 +54,8 @@ class QRCodeGenerator extends StatelessWidget {
                                   gapless: false,
                                   embeddedImage:
                                       const AssetImage('assets/logo.png'),
-                                  embeddedImageStyle: QrEmbeddedImageStyle(
-                                    size: const Size(50, 50),
+                                  embeddedImageStyle: const QrEmbeddedImageStyle(
+                                    size: Size(50, 50),
                                   ),
                                 ),
                                 // child: PrettyQr(
@@ -88,7 +87,7 @@ class QRCodeGenerator extends StatelessWidget {
                                                   content: Text(
                                                       'QR Code Saved ${value.qrCode}'),
                                                   backgroundColor:
-                                                      Color.fromARGB(
+                                                      const Color.fromARGB(
                                                           255, 91, 76, 175),
                                                 )),
                                                 AwesomeDialog(
@@ -112,7 +111,7 @@ class QRCodeGenerator extends StatelessWidget {
                         ],
                       ),
                     )
-                  : Center(
+                  : const Center(
                       child: CircularProgressIndicator(),
                     ))),
     );

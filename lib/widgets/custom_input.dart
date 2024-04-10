@@ -41,7 +41,7 @@ class CustomInput extends StatelessWidget {
           hintText: hintText,
           icon: Icon(
             icon,
-            color: Color.fromARGB(255, 5, 77, 8),
+            color: const Color.fromARGB(255, 5, 77, 8),
           ),
           suffixIcon: isPassword
               ? IconButton(

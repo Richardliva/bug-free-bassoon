@@ -33,7 +33,7 @@ class _SearchCloudState extends State<SearchCloud> {
         ),
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: (name != "" && name != null)
+        stream: (name != "")
             ? FirebaseFirestore.instance
                 .collection('Vehicles')
                 .where("caseSearch", arrayContains: name)

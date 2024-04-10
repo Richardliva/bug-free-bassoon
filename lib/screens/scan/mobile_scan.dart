@@ -117,7 +117,7 @@ class _QRSCanState extends State<QRSCan> {
         );
         onSuccess(barcode.rawValue.toString()).then((value) => {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ViewVehicleDetails()))
+                  MaterialPageRoute(builder: (context) => const ViewVehicleDetails()))
             });
       }
     }
@@ -168,7 +168,6 @@ class BarcodeOverlay extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    if (barcode.corners == null) return;
     final adjustedSize = applyBoxFit(boxFit, arguments.size, size);
 
     double verticalPadding = size.height - adjustedSize.destination.height;
@@ -186,14 +185,14 @@ class BarcodeOverlay extends CustomPainter {
     }
 
     final ratioWidth =
-        (Platform.isIOS ? capture.width! : arguments.size.width) /
+        (Platform.isIOS ? capture.width : arguments.size.width) /
             adjustedSize.destination.width;
     final ratioHeight =
-        (Platform.isIOS ? capture.height! : arguments.size.height) /
+        (Platform.isIOS ? capture.height : arguments.size.height) /
             adjustedSize.destination.height;
 
     final List<Offset> adjustedOffset = [];
-    for (final offset in barcode.corners!) {
+    for (final offset in barcode.corners) {
       adjustedOffset.add(
         Offset(
           offset.dx / ratioWidth + horizontalPadding,
