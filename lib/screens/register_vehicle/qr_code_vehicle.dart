@@ -48,7 +48,7 @@ class QRCodeGenerator extends StatelessWidget {
                                   .toString()),
                               Screenshot(
                                 controller: screenshotController,
-                                child: QrImage(
+                                child: QrImageView(
                                   data: vehicleModel.vehicleId,
                                   version: QrVersions.auto,
                                   size: 320,
