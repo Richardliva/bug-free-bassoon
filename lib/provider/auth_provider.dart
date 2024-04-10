@@ -114,6 +114,7 @@ class AuthProvider extends ChangeNotifier {
       return true;
     } else {
       print("USER IS NOT ADMIN");
+      
       return false;
     }
   }
